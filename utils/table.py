@@ -9,7 +9,7 @@ class Seat:
         self.free = free
         self.occupant = occupant
         
-    # Creat function set_occupant(name) which allows the program to assign someone a seat if it's free
+    # function set_occupant(name) which allows the program to assign someone a seat if it's free
     def set_occupant(self, name):
         if self.free == True:
             self.occupant = name
@@ -17,7 +17,7 @@ class Seat:
         else: 
             print(f"Seat is already occupied by {self.occupant}")
            
-     # Creat function remove_occupant() which remove someone from a seat and return the name of the person occupying the seat before
+     # function remove_occupant() which remove someone from a seat and return the name of the person occupying the seat before
     def remove_occupant(self):
         if self.free == False:
             name = self.occupant
@@ -29,18 +29,23 @@ class Seat:
 
 class Table:
     def __init__(self, capacity : int):
-        self.capacity = capacity 
-        self.seats:[Seat(i + 1) for i in range(capacity)] # type: ignore
+        self.capacity = capacity
+        self.seats = [Seat() for i in range(capacity)] # type: ignore
 
     def __str__(self) -> str:
-        return f"{self.capacity} {self.seats}"
+        return f"{self.capacity}: {self.seats}"
     
-    def has_free_spot():
-        return bool #True if a spot is available 
+    # function that returns a boolean (True) if a spot is available at the table
+    def has_free_spot(self):
+        return any(seat.free for seat in self.seats) #True if a spot is available 
 
-    def assign_seat(name):
-        #that places someone at the table
-        return 
+    # function that places someone at the table
+    def assign_seat(self, name):
+        for seat in self.seats:
+            if seat.free:
+                seat.set_occupant(name)
+            return 
 
-    def left_capacity():
-        return  #that returns an integer
+    # function that returns an integer referring to the number of free spots left at the table
+    def left_capacity(self):
+        return  sum(1 for seat in self.seats if seat.free)

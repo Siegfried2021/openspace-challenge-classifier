@@ -3,7 +3,7 @@ import random
 
 
 class Openspace:
-    def __init__(self, n):        
+    def __init__(self, n: int):        
         self.number_of_tables = n
         self.tables = [Table() for _ in range(n)]
         
