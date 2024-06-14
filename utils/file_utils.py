@@ -1,8 +1,6 @@
-
 import pandas as pd
-from typing import List
 
-def load_names_from_excel(filepath: str) -> List[str]:
+def load_names_from_excel(filepath: str):
     """
     Load names from an Excel file.
     Args:
@@ -11,5 +9,4 @@ def load_names_from_excel(filepath: str) -> List[str]:
         List[str]: A list of names.
     """
     df = pd.read_excel(filepath)
-    return df['Name'].tolist()
-
+    return df['Colleagues'].tolist()
