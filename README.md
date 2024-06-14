@@ -68,14 +68,12 @@ This will set up the project on your local machine and allow you to run it with 
 **Creating a complete GitHub repository:** Mathieu
 ***Code writing:**
 **Seats_assignment:** Hui, Racheal
-**Table_assignment:** Alper
+**Table_assignment:** Alper, Mathieu
 **Openspace:** Mathieu, Hui
 **file_utils:** Alper
 **main:** Alper
 **Debugging:** Mathieu, Alper, Hui, Racheal
 **README:** Mathieu, Alper, Hui, Racheal
-
-Tabii, işte günler ve milestone'lar olarak düzenlenmiş bir timeline:
 
 ---
 
