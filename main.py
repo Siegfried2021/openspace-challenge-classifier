@@ -9,7 +9,7 @@ def main(filepath: str):
     openspace = Openspace()
     openspace.organize(names)
     openspace.display()
-    openspace.store("seating_arrangement.xlsx")
+    openspace.store("openspace_state.xlsx")
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
